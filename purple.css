@@ -1,0 +1,60 @@
+html {
+  --pacify: #cbd;
+  --pajama: #bae;
+  --pastel: #edc;
+  --people: #bee;
+  --pineal: #ace;
+  --poison: #1ed;
+  --potion: #bed;
+  --poncho: #fd7;
+  --potent: seashell;
+  --public: #de7;
+  --purple: #800080;
+}
+
+:any-link {
+  background-color: transparent;
+  color: inherit;
+}
+
+html {
+  color: #edc;
+  background-color: purple;
+}
+
+::selection {
+  color: purple;
+  background: #edc;
+}
+
+@media (prefers-contrast: more) {
+  html { color: #eee }
+  ::selection { background: #eee }
+}
+ 
+@media (prefers-color-scheme: light) {
+  html {
+    background-color: #edc;
+    color: purple;
+  }
+
+  ::selection {
+    color: #bee;
+    background: purple;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :any-link { 
+    color: #bee;
+  }
+}
+
+@media (inverted-colors: inverted)
+  and (prefers-color-scheme: dark) {
+  html {
+    filter: invert(100%);
+  }
+}
+
+/* hi */
